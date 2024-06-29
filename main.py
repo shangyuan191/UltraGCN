@@ -109,8 +109,8 @@ def data_param_prepare(config_file):
     # print(f"test_file_path = {test_file_path}")
     # dataset processing
     train_data, test_data, train_mat, user_num, item_num, constraint_mat = load_data(train_file_path, test_file_path)
-    train_loader = data.DataLoader(train_data, batch_size=batch_size, shuffle = True, num_workers=5)
-    test_loader = data.DataLoader(list(range(user_num)), batch_size=test_batch_size, shuffle=False, num_workers=5)
+    train_loader = data.DataLoader(train_data, batch_size=batch_size, shuffle = True, num_workers=4)
+    test_loader = data.DataLoader(list(range(user_num)), batch_size=test_batch_size, shuffle=False, num_workers=4)
 
     params['user_num'] = user_num
     params['item_num'] = item_num
